@@ -4,9 +4,9 @@
 # -*- coding: utf-8 -*-
 # coding: utf-8
 import sys
-#重新加载sys模块，为什么必须要加载详情请看我的第一篇python文章
+#重新加载sys模块
 reload(sys)
-#重新设置字符集（此时不会出现提示，别怀疑自己敲错了）
+#重新设置字符集
 sys.setdefaultencoding("utf-8")
 3、注意异常的处理，比如数学计算和关键字取不到的情况
 4、如何满足诗句字数的要求
