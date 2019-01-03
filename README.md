@@ -1,31 +1,21 @@
-# poem_generator
+0、注意中文字符的处理：
+1、路径和读取的文件名称中不能有中文
+2、全部使用utf-8编码，代码前面加：
+# -*- coding: utf-8 -*-
+# coding: utf-8
+import sys
+#重新加载sys模块，为什么必须要加载详情请看我的第一篇python文章
+reload(sys)
+#重新设置字符集（此时不会出现提示，别怀疑自己敲错了）
+sys.setdefaultencoding("utf-8")
+3、注意异常的处理，比如数学计算和关键字取不到的情况
+4、如何满足诗句字数的要求
+5、注意line的切分和正则表达式的使用
 
-Generate Chinese poem automatically.
-
-## Requirements
-
-* Python 3.0+
-* Flask
-* jieba
-* sklearn
-
-## Usage
-
-For the first time, run the commands below to init.
-
-```bash
 python preprocess.py
 python get_collocations.py
 python get_topic.py
 python get_start_words.py
-```
 
-Next time, just run this command.
-
-```bash
-python index.py
-```
-
-## Data
 
 In `./data` folder, there is a corpus file "唐诗语料库.txt", and some data files will be generated here.
